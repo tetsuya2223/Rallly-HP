@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="header-container">
-      <img class="header__logo" src="../images/company-logo.png" alt="#">
+      <a href="#"><img class="header__logo" src="../images/company-logo.png" alt="#"></a>
       <nav class="nav-menu">
         <ul class="nav-menu__list">
           <li v-for="(item, index) in menuItems" :key="index" class="nav-menu__item nav-menu__item--dropdown">

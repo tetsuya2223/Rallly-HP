@@ -40,7 +40,6 @@ export default {
 .footer {
   background-color: #fff; 
   padding: 40px 20px; 
-  color: #222222; 
 }
 
 .footer__container {
