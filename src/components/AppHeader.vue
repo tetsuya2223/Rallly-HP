@@ -29,16 +29,16 @@
         <nav class="menu-content">
           <ul>
             <li>
-              <router-link to="/business-overview">事業内容<span>></span></router-link>
+              <router-link to="/business-overview" @click="closeMenu">事業内容<span>></span></router-link>
             </li>
             <li>
-              <router-link to="/company-overview">会社概要<span>></span></router-link>
+              <router-link to="/company-overview" @click="closeMenu">会社概要<span>></span></router-link>
             </li>
             <li>
-              <router-link to="#">代表/社員<span>></span></router-link>
+              <router-link to="#" @click="closeMenu">キャリア採用<span>></span></router-link>
             </li>
             <li>
-              <router-link to="/contact-us">お問い合わせ<span>></span></router-link>
+              <router-link to="/contact-us" @click="closeMenu">お問い合わせ<span>></span></router-link>
             </li>
           </ul>
         </nav>
