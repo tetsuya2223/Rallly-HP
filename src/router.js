@@ -5,10 +5,10 @@ import CompanyOverview from './components/CompanyOverview.vue'
 import ContactUs from './components/ContactUs.vue'
 
 const routes = [
-  { path: '/', component: MainPage },
-  { path: '/business-overview', component: BusinessOverview },
-  { path: '/company-overview', component: CompanyOverview },
-  { path: '/contact-us', component: ContactUs }
+  { path: '/', component: MainPage, name: 'MainPage' },
+  { path: '/business-overview', component: BusinessOverview, name: 'BusinessOverview' },
+  { path: '/company-overview', component: CompanyOverview, name: 'CompanyOverview' },
+  { path: '/contact-us', component: ContactUs, name: 'ContactUs' }
 ]
 
 const router = createRouter({

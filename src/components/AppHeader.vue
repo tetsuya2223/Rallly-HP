@@ -1,46 +1,48 @@
 <template>
-  <header class="header">
+  <header :class="headerClass">
     <div class="header-container">
-      <a href="#"><img class="header__logo" src="../images/company-logo.png" alt="#"></a>
-      <nav class="nav-menu">
-        <ul class="nav-menu__list">
-          <li v-for="(item, index) in menuItems" :key="index" class="nav-menu__item nav-menu__item--dropdown">
-            <a :href="item.href" class="nav-menu__link">
-              {{ item.title }}<span v-if="item.dropdown" class="dropdown-arrow"></span>
-            </a>
-            <ul v-if="item.dropdown" class="nav-menu__dropdown">
-              <li v-for="(subItem, subIndex) in item.dropdown" :key="subIndex" class="nav-menu__dropdown-item">
-                <a :href="subItem.href" class="nav-menu__dropdown-link">{{ subItem.title }}</a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-          <!-- ハンバーガーメニュー -->
-    <button class="hamburger" aria-label="Toggle navigation" @click="toggleMenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="overlay-menu" :class="{ 'is-open': isMenuOpen }" v-show="isMenuOpen">
-      <button class="close-menu" aria-label="Close menu" @click="closeMenu">&times;</button>
-      <nav class="menu-content">
-        <ul>
-          <li>
-            <a href="#">事業内容<span>></span></a>
-          </li>
-          <li>
-            <a href="#">会社概要<span>></span></a>
-          </li>
-          <li>
-            <a href="#">代表/社員<span>></span></a>
-          </li>
-          <li>
-            <a href="#">お問い合わせ<span>></span></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <router-link to="/" class="header__logo-link">
+        <img class="header-logo" src="../images/company-logo.png" alt="Company Logo">
+      </router-link>
+        <nav class="nav-menu">
+          <ul class="nav-menu__list">
+            <li v-for="(item, index) in menuItems" :key="index" class="nav-menu__item nav-menu__item--dropdown">
+              <router-link :to="item.href" class="nav-menu__link">
+                {{ item.title }}<span v-if="item.dropdown" class="dropdown-arrow"></span>
+              </router-link>
+              <ul v-if="item.dropdown" class="nav-menu__dropdown">
+                <li v-for="(subItem, subIndex) in item.dropdown" :key="subIndex" class="nav-menu__dropdown-item">
+                  <router-link :to="subItem.href" class="nav-menu__dropdown-link">{{ subItem.title }}</router-link>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      <!-- ハンバーガーメニュー -->
+      <button class="hamburger" aria-label="Toggle navigation" @click="toggleMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="overlay-menu" :class="{ 'is-open': isMenuOpen }" v-show="isMenuOpen">
+        <button class="close-menu" aria-label="Close menu" @click="closeMenu">&times;</button>
+        <nav class="menu-content">
+          <ul>
+            <li>
+              <router-link to="/business-overview">事業内容<span>></span></router-link>
+            </li>
+            <li>
+              <router-link to="/company-overview">会社概要<span>></span></router-link>
+            </li>
+            <li>
+              <router-link to="#">代表/社員<span>></span></router-link>
+            </li>
+            <li>
+              <router-link to="/contact-us">お問い合わせ<span>></span></router-link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
     <p class="header__message" ref="message">{{ displayedMessage }}</p>
   </header>
@@ -57,7 +59,7 @@ export default {
       menuItems: [
         {
           title: '事業領域',
-          href: '#business',
+          href: 'business-overview',
           dropdown: [
             { title: 'ICTコンサルティング', href: '#' },
             { title: '社外情シス', href: '#' },
@@ -66,15 +68,15 @@ export default {
         },
         {
           title: '会社概要',
-          href: '#company',
+          href: 'CompanyOverview',
           dropdown: [
             { title: '企業情報', href: '#' },
             { title: '企業理念', href: '#' },
             { title: '代表メッセージ', href: '#' },
           ]
         },
-        { title: 'キャリア採用', href: '#careers' },
-        { title: 'お問い合わせ', href: '#contact' }
+        { title: 'キャリア採用', href: '#' },
+        { title: 'お問い合わせ', href: 'contact-us' }
       ],
       messages: [
         '共に未来を駆け抜ける、革新と連携の力',
@@ -84,6 +86,12 @@ export default {
       displayedMessage: '',    // 現在表示されているテキスト
       index: 1,                // タイピング中のインデックス
     };
+  },
+  computed: {
+    headerClass() {
+      // Vue Routerを使って現在のページを取得
+      return this.$route.name === 'MainPage' ? 'header-main' : 'header';
+    }
   },
   mounted() {
     // コンポーネントがマウントされたらタイピングアニメーションを開始
@@ -135,12 +143,24 @@ export default {
 </script>
 
 <style scoped>
-.header {
+/*メインページ用のヘッダー*/
+.header-main {
   background-image: url('../images/header-background.jpg');
   width: 100%;
   height: 700px;
   position: relative;
   background-size: cover; 
+}
+/*他のページ用のヘッダー*/
+.header {
+  background-image: url('../images/header-background.jpg');
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-size: cover; 
+}
+.header .header__message {
+  display: none;
 }
 
 .header-container {
@@ -148,10 +168,13 @@ export default {
   justify-content: space-between;
   padding: 70px;
 }
-
-.header__logo {
-  width: auto;
-  height: 50px;
+.header__logo-link {
+  display: inline-block; /* ロゴの周囲のスペースを調整 */
+  width: 120px;
+}
+.header-logo {
+  max-width: 100%; /* 高さは固定し、幅を自動で調整 */
+  height: auto;
 }
 
 .nav-menu {
