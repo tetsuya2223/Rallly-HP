@@ -305,4 +305,110 @@ export default {
 .news-card__link:hover {
   opacity: 0.7;
 }
+@media screen and (max-width: 767px) {
+/* 事業内容セクション */
+.service-container {
+  padding: 50px 20px; /* スマホでは内側の余白を狭く */
+}
+
+.service-container__title {
+  font-size: 2.5rem; /* スマホではタイトルのフォントサイズを小さく */
+}
+
+.service-container__sub-title {
+  font-size: 1.2rem; /* サブタイトルのフォントサイズを小さく */
+}
+.services-section__item.visible {
+  margin-bottom: 30px;
+}
+
+/* 各サービスアイテム */
+.services-section__item {
+  flex-direction: column; /* スマホサイズでは縦並び */
+  margin-top: 20px; /* アイテム間の余白を狭く */
+}
+.services-section__content,
+.services-section__image {
+  width: 100%;
+}
+.services-section__item.reverse-layout {
+  flex-direction: column; /* スマホサイズでは縦並び */
+  margin-top: 20px;
+}
+/* サービス内容と画像の順序を調整 */
+.services-section__content {
+  order: 2; /* サービス内容を後に表示 */
+}
+
+.services-section__image {
+  order: 1; /* 画像を先に表示 */
+  margin-top: 20px; /* 画像の上部の余白を追加 */
+}
+
+/* サービス内容 */
+.services-section__content {
+  margin: 0; /* 横の余白をなくす */
+  padding: 10px; /* 内側の余白を追加 */
+}
+
+.services-section__title {
+  font-size: 1.4rem; /* サービスタイトルのフォントサイズを小さく */
+  margin: 0;
+  margin-top: 30px;
+}
+
+.services-section__detail {
+  font-size: 1rem; /* 詳細のフォントサイズを小さく */
+}
+
+/* サービス画像 */
+.services-section__image {
+  margin-top: 20px; /* 画像の上部の余白を追加 */
+}
+
+/* リンク */
+.service-section--link {
+  font-size: 1rem; /* リンクのフォントサイズを小さく */
+  padding: 10px; /* リンクの内側の余白を調整 */
+}
+
+/* お知らせセクション */
+.news-section {
+  padding: 50px 20px; /* スマホでは内側の余白を狭く */
+}
+
+.news-section__title {
+  font-size: 2.5rem; /* スマホではタイトルのフォントサイズを小さく */
+}
+
+.news-section__sub-title {
+  font-size: 1.2rem; /* サブタイトルのフォントサイズを小さく */
+}
+
+/* ニュースカード */
+.news-cards-wrapper {
+  flex-direction: column; /* スマホサイズでは縦並び */
+  gap: 10px; /* カード間の余白を狭く */
+  overflow-x: hidden; /* 横スクロールを無効化 */
+}
+
+.news-card {
+  width: 100%; /* カードの幅を全体に広げる */
+  height: auto; /* 高さを自動調整 */
+}
+
+.news-card__image {
+  height: 150px; /* 画像の高さを調整 */
+}
+
+/* 日付とタイトル */
+.news-card__date {
+  font-size: 0.9rem; /* 日付のフォントサイズを小さく */
+}
+
+.news-card__title {
+  font-size: 1.2rem; /* タイトルのフォントサイズを小さく */
+}
+
+}
 </style>
