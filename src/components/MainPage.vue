@@ -1,5 +1,5 @@
 <template>
-  <article id="service-container" class="service-container">
+  <article class="service-container">
     <h2 class="service-container__title">BUSINESS</h2>
     <h5 class="service-container__sub-title">事業内容</h5>
     <div class="service-section">
@@ -151,7 +151,7 @@ export default {
   justify-content: space-between; 
   margin-bottom: 100px;
   opacity: 0; /* 初期状態は透明 */
-  transform: translateY(-20px); /* 初期状態は上にずらす */
+  transform: translateY(20px); /* 初期状態は上にずらす */
   transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* アニメーションの設定 */
 }
 
@@ -163,7 +163,7 @@ export default {
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translateY(-20px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;

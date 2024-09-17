@@ -35,7 +35,7 @@
               <router-link to="/company-overview" @click="closeMenu">会社概要<span>></span></router-link>
             </li>
             <li>
-              <router-link to="#" @click="closeMenu">キャリア採用<span>></span></router-link>
+              <router-link to="/saiyou-overview" @click="closeMenu">キャリア採用<span>></span></router-link>
             </li>
             <li>
               <router-link to="/contact-us" @click="closeMenu">お問い合わせ<span>></span></router-link>
@@ -75,7 +75,7 @@ export default {
             { title: '代表メッセージ', href: '#' },
           ]
         },
-        { title: 'キャリア採用', href: '#' },
+        { title: 'キャリア採用', href: 'saiyou-overview' },
         { title: 'お問い合わせ', href: 'contact-us' }
       ],
       messages: [

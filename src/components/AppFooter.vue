@@ -2,52 +2,52 @@
   <footer class="footer">
     <div class="footer__container">
       <div class="footer__column">
-        <h4 class="footer__heading" @click="toggleSection('business')" v-if="isMobile">
-          事業領域
-          <span class="accordion-icon">{{ isOpen.business ? '−' : '+' }}</span>
-        </h4>
-        <h4 class="footer__heading" v-else>
-          事業領域
-        </h4>
+          <h4 class="footer__heading" @click="toggleSection('business')" v-if="isMobile">
+            事業領域
+            <span class="accordion-icon">{{ isOpen.business ? '−' : '+' }}</span>
+          </h4>
+          <h4 class="footer__heading" v-else>
+            事業領域
+          </h4>
         <ul :class="['footer__list', { 'is-open': isOpen.business }]" v-show="!isMobile || isOpen.business">
-          <li><a href="#">ICTコンサルティング</a></li>
-          <li><a href="#">社外情シス</a></li>
-          <li><a href="#">総合インバウンド事業</a></li>
+          <li><router-link class="footer__link--detail" to="#">ICTコンサルティング</router-link></li>
+          <li><router-link class="footer__link--detail" to="#">社外情シス</router-link></li>
+          <li><router-link class="footer__link--detail" to="#">総合インバウンド事業</router-link></li>
         </ul>
       </div>
       <div class="footer__column">
-        <h4 class="footer__heading" @click="toggleSection('company')" v-if="isMobile">
-          会社概要
-          <span class="accordion-icon">{{ isOpen.company ? '−' : '+' }}</span>
-        </h4>
-        <h4 class="footer__heading" v-else>
-          会社概要
-        </h4>
+          <h4 class="footer__heading" @click="toggleSection('company')" v-if="isMobile">
+            会社概要
+            <span class="accordion-icon">{{ isOpen.company ? '−' : '+' }}</span>
+          </h4>
+          <h4 class="footer__heading" v-else>
+            会社概要
+          </h4>
         <ul :class="['footer__list', { 'is-open': isOpen.company }]" v-show="!isMobile || isOpen.company">
-          <li><a href="#">企業情報</a></li>
-          <li><a href="#">企業理念</a></li>
-          <li><a href="#">代表メッセージ</a></li>
+          <li><router-link class="footer__link--detail" to="#">企業情報</router-link></li>
+          <li><router-link class="footer__link--detail" to="#">企業理念</router-link></li>
+          <li><router-link class="footer__link--detail" to="#">代表メッセージ</router-link></li>
         </ul>
       </div>
       <div class="footer__column">
-        <a href="#">
+        <router-link class="footer__link" to="/saiyou-overview">
           <h4 class="footer__heading" v-if="isMobile">
             キャリア採用
           </h4>
           <h4 class="footer__heading" v-else>
             キャリア採用
           </h4>
-        </a>
+        </router-link>
       </div>
       <div class="footer__column">
-        <a href="#">
+        <router-link class="footer__link" to="/contact-us">
           <h4 class="footer__heading" v-if="isMobile">
             お問い合わせ
           </h4>
           <h4 class="footer__heading" v-else>
             お問い合わせ
           </h4>
-        </a>
+        </router-link>
       </div>
     </div>
     <div class="footer__bottom">
