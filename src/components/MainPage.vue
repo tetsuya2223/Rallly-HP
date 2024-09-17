@@ -1,5 +1,5 @@
 <template>
-  <article class="service-container">
+  <article id="service-container" class="service-container">
     <h2 class="service-container__title">BUSINESS</h2>
     <h5 class="service-container__sub-title">事業内容</h5>
     <div class="service-section">
