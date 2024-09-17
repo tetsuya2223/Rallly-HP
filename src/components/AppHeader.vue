@@ -16,6 +16,31 @@
           </li>
         </ul>
       </nav>
+          <!-- ハンバーガーメニュー -->
+    <button class="hamburger" aria-label="Toggle navigation" @click="toggleMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="overlay-menu" :class="{ 'is-open': isMenuOpen }" v-show="isMenuOpen">
+      <button class="close-menu" aria-label="Close menu" @click="closeMenu">&times;</button>
+      <nav class="menu-content">
+        <ul>
+          <li>
+            <a href="#">事業内容<span>></span></a>
+          </li>
+          <li>
+            <a href="#">会社概要<span>></span></a>
+          </li>
+          <li>
+            <a href="#">代表/社員<span>></span></a>
+          </li>
+          <li>
+            <a href="#">お問い合わせ<span>></span></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     </div>
     <p class="header__message" ref="message">{{ displayedMessage }}</p>
   </header>
@@ -28,6 +53,7 @@ export default {
     return {
       animationDuration: '10s',
       delayBetweenMessages: '10s',
+      isMenuOpen: false,
       menuItems: [
         {
           title: '事業領域',
@@ -97,6 +123,13 @@ export default {
         setTimeout(this.typeText, 1500); // タイピングを再度開始
       }
     },
+        // ハンバーガーメニュー
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen
+    },
+    closeMenu() {
+      this.isMenuOpen = false
+    },
   }
 };
 </script>
@@ -113,30 +146,30 @@ export default {
 .header-container {
   display: flex;
   justify-content: space-between;
+  padding: 70px;
 }
 
 .header__logo {
   width: auto;
   height: 50px;
-  margin-left: 70px;
-  margin-top: 70px;
 }
 
 .nav-menu {
-  margin-top: 70px;
   margin-right: 80px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-menu__list {
   display: flex;
   list-style-type: none;
+  margin: 0;
 }
 
 .nav-menu__item {
   position: relative;
   text-decoration: none;
-  margin-left: 40px;
-  padding: 10px 0;
+  margin-left: 20px;
 }
 
 .nav-menu__link {
@@ -211,6 +244,18 @@ export default {
   visibility: visible;
   pointer-events: auto;
 }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 2;
+}
 /*ヘッダーメッセージ*/
 .header__message {
   position: absolute;
@@ -235,5 +280,133 @@ export default {
   50% {
     opacity: 0;
   }    
+}
+@media screen and (max-width: 767px) {
+  .header-image__logo {
+    width: 73px;
+    height: 28px;
+    font-size: 10px;
+    z-index: 1000;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2;
+    margin: 8px 16px 8px 0px;
+  }
+  .hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .menu-item {
+    margin: 10px 0;
+  }
+
+  .menu-item a {
+    padding: 10px;
+  }
+
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    overflow: auto;
+  }
+  .overlay-menu.is-open {
+    transform: translateX(0);
+  }
+  .overlay-menu .menu-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+  }
+  .menu-content span {
+    padding-left: 26px;
+  }
+  .overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    padding-top: 150px;
+    margin: 0;
+  }
+  .overlay-menu li {
+    border-top: 1px solid #8b8b8b;
+    display: flex;
+  }
+
+  .overlay-menu li:last-child {
+    border-bottom: 1px solid #8b8b8b;
+  }
+  .overlay-menu a {
+    color: #8b8b8b;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding-left: 48px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 15px;
+  }
+
+  .overlay-menu a:hover {
+    color: #fd9603;
+    transition: color 0.3s;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    color: #8b8b8b;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  .close-menu:hover {
+    opacity: 0.7;
+  }
+  .header__message {
+    font-size: 24px;
+    white-space: normal; 
+    padding: 0 20px; 
+    text-align: center; 
+  }
+  
 }
 </style>
