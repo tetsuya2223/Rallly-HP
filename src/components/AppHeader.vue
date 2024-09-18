@@ -61,9 +61,9 @@ export default {
           title: '事業領域',
           href: 'business-overview',
           dropdown: [
-            { title: 'ICTコンサルティング', href: '#' },
-            { title: '社外情シス', href: '#' },
-            { title: '観光インバウンド事業', href: '#' },
+            { title: 'ICTコンサルティング', href: '/ict-service' },
+            { title: '社外情シス', href: '/ict-service' },
+            { title: '観光インバウンド事業', href: '/inbound-service' },
           ]
         },
         {

@@ -10,9 +10,9 @@
             事業領域
           </h4>
         <ul :class="['footer__list', { 'is-open': isOpen.business }]" v-show="!isMobile || isOpen.business">
-          <li><router-link class="footer__link--detail" to="#">ICTコンサルティング</router-link></li>
-          <li><router-link class="footer__link--detail" to="#">社外情シス</router-link></li>
-          <li><router-link class="footer__link--detail" to="#">総合インバウンド事業</router-link></li>
+          <li><router-link class="footer__link--detail" to="/ict-service">ICTコンサルティング</router-link></li>
+          <li><router-link class="footer__link--detail" to="/ict-service">社外情シス</router-link></li>
+          <li><router-link class="footer__link--detail" to="/inbound-service">総合インバウンド事業</router-link></li>
         </ul>
       </div>
       <div class="footer__column">

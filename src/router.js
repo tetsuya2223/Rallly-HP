@@ -1,16 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import MainPage from './components/MainPage.vue'
-import BusinessOverview from './components/BusinessOverview.vue'
-import CompanyOverview from './components/CompanyOverview.vue'
-import ContactUs from './components/ContactUs.vue'
-import SaiyouOverview from './components/SiyouOverview.vue'
+import MainPage from './views/MainPage.vue'
+import BusinessOverview from './views/BusinessOverview.vue'
+import ContactUs from './views/ContactUs.vue'
+import SaiyouOverview from './views/SiyouOverview.vue'
+import IctService from './views/IctService.vue'
+import InboundService from './views/InboundService.vue';
 
 const routes = [
   { path: '/', component: MainPage, name: 'MainPage' },
   { path: '/business-overview', component: BusinessOverview, name: 'BusinessOverview' },
-  { path: '/company-overview', component: CompanyOverview, name: 'CompanyOverview' },
   { path: '/contact-us', component: ContactUs, name: 'ContactUs' },
-  { path: '/saiyou-overview', component: SaiyouOverview, name: 'SaiyouOverview' } 
+  { path: '/saiyou-overview', component: SaiyouOverview, name: 'SaiyouOverview' } ,
+  { path: '/ict-service', component: IctService, name: 'IctService' } ,
+  { path: '/inbound-service', component: InboundService, name: 'InboundService' } 
 ]
 
 const router = createRouter({
