@@ -2,7 +2,7 @@
   <AboutIctSection :aboutIctDatas="AboutIcts" />
   <h1 class="details-ict__heading">ICTコンサルティング事業詳細</h1>
   <LaborIctSection :LaborIctDatas="LaborIcts" />
-
+  <AccountingIctSection :AccountingIctDatas="AccountingIcts" />
 </template>
 
 <script>
@@ -14,7 +14,9 @@ import LaborIctSection from '@/components/LaborIct.vue';
 import labor1 from '@/images/labor-1.png';
 import labor2 from '@/images/labor-2.png';
 import labor3 from '@/images/labor-3.png';
-
+import AccountingIctSection from '@/components/AccountingIct.vue';
+import accounting1 from '@/images/accounting-1.png';
+import accounting2 from '@/images/accounting-2.png';
 
 
 export default {
@@ -22,6 +24,7 @@ export default {
   components: {
     AboutIctSection, 
     LaborIctSection,
+    AccountingIctSection
   },
   data() {
     return {
@@ -80,11 +83,29 @@ export default {
           `,
         }
       ],
+      AccountingIcts: [
+        {
+          id: 1,
+          title: '会計システムの導入支援',
+          image: accounting1,
+          detail: `
+          月次試算表作成の早期化、資金繰り予測の見える化、財務分析の高度化を実現したい企業に、会計システムの導入支援を実施しております。<br>
+          初期設定や、前年度仕訳データのインポートなど、稼働に向けたサポートに加え、システムになれるまでの運用サポートを実施しています。
+          `,
+        },
+        {
+          id: 2,
+          title: 'インボイス・電子帳簿保存法への対応支援',
+          image: accounting2,
+          detail: `
+          現在の業務フローを大きく変えず、インボイス・電子帳簿保存法に対応するための支援を実施いたします。
+          制度概要を確認しただけではわからない会社独自のルールなどは、他社実績や国税庁からの回答をもとに適切に運用ルールをご提案させていただきます。
+          `,
+        },
+      ]
     }
   },
   mounted() {
-    console.log(this.LaborIcts);  // データが正しく存在するか確認
-    console.log(this.AboutIcts);  // 同様に確認
     // 各サービスアイテムに対してIntersection Observerを設定
     const items = document.querySelectorAll('.ict-section__item, .details-section__item');
     const observer = new IntersectionObserver((entries) => {
@@ -103,11 +124,6 @@ export default {
   },
 }
 </script>
-
-<style scoped>
-
-</style>
-
 
 <style scoped>
 .details-ict__heading{

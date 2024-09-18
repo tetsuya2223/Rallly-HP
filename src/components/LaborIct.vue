@@ -47,14 +47,14 @@
             </tr>
             <tr>
               <td class="table-item">5</td>
-              <td class="table-category">現状業務のヒアリング</td>
+              <td class="table-category">稼働モニタリング</td>
               <td class="table-content">オンラインでの操作サポート<br>目標設定、進捗管理</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="schedule-container">
-        <div class="schedule-header">会計システム導入支援：実施スケジュール</div>
+        <div class="schedule-header">人事労務システム導入支援：実施スケジュール</div>
         <table class="schedule-table">
             <thead>
               <tr>
