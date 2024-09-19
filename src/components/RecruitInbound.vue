@@ -65,7 +65,7 @@
 
 <script>
 export default {
-  name: 'InboundBusiness',
+  name: 'RecruitInbound.',
 };
 </script>
 
@@ -102,6 +102,7 @@ export default {
 .inbound-business__content--heading {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  margin-top: 0;
   font-weight: bold;
 }
 
@@ -136,6 +137,7 @@ export default {
 .izakayatrip__content--heading {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  margin-top: 0;
   font-weight: bold;
 }
 
@@ -179,7 +181,7 @@ export default {
 }
 
 .summary-header {
-  background-color: #007BFF;
+  background-color: #000;
   color: white;
   font-weight: bold;
 }
@@ -195,7 +197,7 @@ export default {
   width: 100%;
   text-align: center;
   padding: 20px;
-  background-color: #007BFF;
+  background-color: #000;
   color: white;
   text-decoration: none;
   font-weight: bold;

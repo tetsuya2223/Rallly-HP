@@ -61,6 +61,7 @@ export default {
 .service-container__title {
   font-weight: bold;
   font-size: 5.4rem;
+  margin-bottom: 0;
 }
 .service-container__sub-title {
   font-weight: bold;
@@ -118,9 +119,7 @@ export default {
 }
 
 .services-section__detail {
-  margin-top: 40px;
   font-size: 1.1rem;
-  line-height: 1.8;
 }
 
 .services-section__image {
@@ -141,11 +140,11 @@ export default {
   padding: 15px;
   text-align: center;
   margin-top: 20px;
+  text-decoration: none;
 }
 
 .service-section--link:hover {
   opacity: 0.7;
-  text-decoration: none;
 }
 
 .link-arrow {

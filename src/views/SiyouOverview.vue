@@ -18,15 +18,15 @@
     </div>
   </section>
   <section class="section__about-rallly"></section>
-  <InbundBusiness />
+  <RecruitInbound />
 </template>
 
 <script>
-import InbundBusiness from '@/components/InbundBusiness.vue';
+import RecruitInbound from '@/components/RecruitInbound.vue';
 
 export default {
   name: 'SaiyouOverview',
-  components: { InbundBusiness },
+  components: { RecruitInbound },
 };
 </script>
 
@@ -77,7 +77,7 @@ export default {
 .requirements-detail__heading {
   font-size: 2rem;
   font-weight: bold;
-  margin-left: 20px;
+  margin: 0;
 }
 
 .requirements-content__list {
@@ -87,7 +87,7 @@ export default {
 .requirements-content--detail {
   list-style: none;
   font-size: 1.4rem;
-  padding-top: 50px;
+  padding-top: 20px;
   font-weight: bold;
   text-align: left;
 }
@@ -95,7 +95,7 @@ export default {
 .requirements-content--link {
   display: inline-block;
   color: white;
-  background-color: #007BFF;
+  background-color: #000;
   font-size: 1.4rem;
   padding: 10px;
   margin-top: 40px;
@@ -103,7 +103,6 @@ export default {
   text-align: center;
   text-decoration: none;
 }
-
 .requirements-content--link:hover {
   opacity: 0.7;
 }

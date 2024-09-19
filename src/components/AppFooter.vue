@@ -18,10 +18,10 @@
       <div class="footer__column">
         <router-link class="footer__link" to="/about-company">
           <h4 class="footer__heading" v-if="isMobile">
-            キャリア採用
+            会社概要
           </h4>
           <h4 class="footer__heading" v-else>
-            キャリア採用
+            会社概要
           </h4>
         </router-link>
       </div>
@@ -175,6 +175,7 @@ export default {
   .footer__container {
     flex-direction: column;
     margin: 0;
+    justify-content: center;
   }
   .footer__heading {
     font-size: 16px;
