@@ -5,6 +5,7 @@ import ContactUs from './views/ContactUs.vue'
 import SaiyouOverview from './views/SiyouOverview.vue'
 import IctService from './views/IctService.vue'
 import InboundService from './views/InboundService.vue';
+import AboutCompany from './views/AboutCompany.vue';
 
 const routes = [
   { path: '/', component: MainPage, name: 'MainPage' },
@@ -12,7 +13,8 @@ const routes = [
   { path: '/contact-us', component: ContactUs, name: 'ContactUs' },
   { path: '/saiyou-overview', component: SaiyouOverview, name: 'SaiyouOverview' } ,
   { path: '/ict-service', component: IctService, name: 'IctService' } ,
-  { path: '/inbound-service', component: InboundService, name: 'InboundService' } 
+  { path: '/inbound-service', component: InboundService, name: 'InboundService' } ,
+  { path: '/about-company', component: AboutCompany, name: 'AboutCompany' }  // 追加したルート
 ]
 
 const router = createRouter({

@@ -20,8 +20,8 @@ export default {
 
 <style>
 #app {
-  background-color: #f5f5f5; /* ここに希望する背景色を設定 */
+  background-color: #f7f7f7; /* ここに希望する背景色を設定 */
   font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Arial", sans-serif;
-  color: #333333;
+  color: #1a1a1a;
 }
 </style>

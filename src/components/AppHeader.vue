@@ -32,7 +32,7 @@
               <router-link to="/business-overview" @click="closeMenu">事業内容<span>></span></router-link>
             </li>
             <li>
-              <router-link to="/company-overview" @click="closeMenu">会社概要<span>></span></router-link>
+              <router-link to="/about-company" @click="closeMenu">会社概要<span>></span></router-link>
             </li>
             <li>
               <router-link to="/saiyou-overview" @click="closeMenu">キャリア採用<span>></span></router-link>
@@ -68,12 +68,7 @@ export default {
         },
         {
           title: '会社概要',
-          href: 'CompanyOverview',
-          dropdown: [
-            { title: '企業情報', href: '#' },
-            { title: '企業理念', href: '#' },
-            { title: '代表メッセージ', href: '#' },
-          ]
+          href: 'about-company',
         },
         { title: 'キャリア採用', href: 'saiyou-overview' },
         { title: 'お問い合わせ', href: 'contact-us' }

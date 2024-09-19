@@ -16,18 +16,14 @@
         </ul>
       </div>
       <div class="footer__column">
-          <h4 class="footer__heading" @click="toggleSection('company')" v-if="isMobile">
-            会社概要
-            <span class="accordion-icon">{{ isOpen.company ? '−' : '+' }}</span>
+        <router-link class="footer__link" to="/about-company">
+          <h4 class="footer__heading" v-if="isMobile">
+            キャリア採用
           </h4>
           <h4 class="footer__heading" v-else>
-            会社概要
+            キャリア採用
           </h4>
-        <ul :class="['footer__list', { 'is-open': isOpen.company }]" v-show="!isMobile || isOpen.company">
-          <li><router-link class="footer__link--detail" to="#">企業情報</router-link></li>
-          <li><router-link class="footer__link--detail" to="#">企業理念</router-link></li>
-          <li><router-link class="footer__link--detail" to="#">代表メッセージ</router-link></li>
-        </ul>
+        </router-link>
       </div>
       <div class="footer__column">
         <router-link class="footer__link" to="/saiyou-overview">
