@@ -12,7 +12,7 @@
         <div class="services-section__content">
           <h4 class="services-section__title">{{ service.title }}</h4>
           <p class="services-section__detail" v-html="service.detail"></p>
-          <a class="service-section--link" :href="service.link">詳しくはこちら<span class="link-arrow">></span></a>
+          <a class="service-section--link" :to="service.link">詳しくはこちら<span class="link-arrow">></span></a>
         </div>
         <div class="services-section__image">
           <img class="services-section__image--image" :src="service.image" :alt="service.title">
