@@ -56,29 +56,64 @@
       <div class="schedule-container">
         <div class="schedule-header">会計システム導入支援：実施スケジュール</div>
         <table class="schedule-table">
-            <thead>
-              <tr>
-                  <th>実施内容</th><th>1M</th><th>2M</th><th>3M</th><th>4M</th><th>5M</th><th>6M</th>
-              </tr>
-            </thead>
-            <tbody>
-                <tr>
-                  <td>現状業務のヒアリング・課題整理</td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                </tr>
-                <tr>
-                  <td>システムでの新運用案件作成</td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                </tr>
-                <tr>
-                  <td>初期設定支援</td><td class="empty-cell"></td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                </tr>
-                <tr>
-                  <td>データインポート支援</td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td>
-                </tr>
-                <tr>
-                  <td>稼働モニタリング</td>
-                    <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td colspan="2"><div class="arrow"></div></td>
-                </tr>
-            </tbody>
+          <thead>
+            <tr>
+              <th>実施内容</th>
+              <th>1M</th>
+              <th>2M</th>
+              <th>3M</th>
+              <th>4M</th>
+              <th>5M</th>
+              <th>6M</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>現状業務のヒアリング・課題整理</td>
+              <td><div class="arrow"></div></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+            </tr>
+            <tr>
+              <td>システムでの新運用案件作成</td>
+              <td class="empty-cell"></td>
+              <td><div class="arrow"></div></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+            </tr>
+            <tr>
+              <td>初期設定支援</td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td><div class="arrow short-arrow"></div></td> <!-- 3M の半分までの矢印 -->
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+            </tr>
+            <tr>
+              <td>データインポート支援</td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td><div class="arrow one-half-arrow half-start"></div></td> <!-- 3M の半分から 4M -->
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+            </tr>
+            <tr>
+              <td>稼働モニタリング</td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td class="empty-cell"></td>
+              <td><div class="arrow double-arrow"></div></td>
+              <td class="empty-cell"></td>
+            </tr>
+          </tbody>
         </table>
     </div>
       <a class="ict-details-contact__link" href="/contact-us">会計管理システムICT化について相談してみる</a>
@@ -244,7 +279,7 @@
 }
 .schedule-table th, .schedule-table td {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 10px 3px;
   text-align: center;
 }
 .schedule-table th {
@@ -267,9 +302,22 @@
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-.empty-cell {
-  background-color: #f5f5f5;
+.short-arrow {
+  width: 50%; /* 半分の長さ */
 }
+
+/* 3Mの半分から4Mの最後までの矢印 */
+.one-half-arrow {
+  width: 150%; /* 4M全体 */
+}
+.half-start {
+  margin-left: 50%;
+}
+
+.double-arrow {
+  width: 200%;
+}
+
 
 /* スマホサイズ用のスタイル */
 @media screen and (max-width: 767px) {

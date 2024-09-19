@@ -58,25 +58,33 @@
         <table class="schedule-table">
             <thead>
               <tr>
-                  <th>実施内容</th><th>1M</th><th>2M</th><th>3M</th><th>4M</th><th>5M</th><th>6M</th>
+                  <th>実施内容</th><th>1-2M</th><th>3-4M</th><th>5-6M</th><th>7-8M</th><th>9-10M</th><th>11-12M</th>
               </tr>
             </thead>
             <tbody>
                 <tr>
-                  <td>現状業務のヒアリング・課題整理</td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                  <td>現状業務のヒアリング・課題整理</td><td><div class="arrow"></div></td><td ></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
                 </tr>
                 <tr>
-                  <td>システムでの新運用案件作成</td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                  <td>新運用案件作成</td><td ></td><td><div class="arrow short-arrow"></div></td><td ></td><td ></td><td ></td><td ></td>
                 </tr>
                 <tr>
-                  <td>初期設定支援</td><td class="empty-cell"></td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                  <td>初期設定支援</td><td ></td><td><div class="arrow short-arrow start-half"></div></td><td ></td><td ></td><td ></td><td ></td>
                 </tr>
                 <tr>
-                  <td>データインポート支援</td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td><div class="arrow"></div></td><td class="empty-cell"></td><td class="empty-cell"></td>
+                  <td>人事管理システム稼働</td><td ></td><td ></td><td><div class="arrow short-arrow"></div></td><td ></td><td ></td><td ></td>
                 </tr>
                 <tr>
-                  <td>稼働モニタリング</td>
-                    <td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td class="empty-cell"></td><td colspan="2"><div class="arrow"></div></td>
+                  <td>給与計算システム稼働</td>
+                    <td ></td><td ></td><td><div class="arrow short-arrow start-half"></div></td><td ></td><td ></td><td ></td>
+                </tr>
+                <tr>
+                  <td>勤怠管理システム稼働</td>
+                    <td ></td><td ></td><td ></td><td><div class="arrow one-half-arrow"></div></td><td></td><td ></td>
+                </tr>
+                <tr>
+                  <td>年末調整システム稼働</td>
+                    <td ></td><td ></td><td ></td><td></td><td><div class="arrow one-half-arrow start-half "></div></td><td></td>
                 </tr>
             </tbody>
         </table>
@@ -244,8 +252,8 @@ export default {
 }
 .schedule-table th, .schedule-table td {
   border: 1px solid #ccc;
-  padding: 10px;
   text-align: center;
+  padding: 10px 3px;
 }
 .schedule-table th {
   background-color: #0f407b;
@@ -267,8 +275,14 @@ export default {
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
 }
-.empty-cell {
-  background-color: #f5f5f5;
+.short-arrow {
+  width: 50%; /* 半分の長さ */
+}
+.start-half {
+  margin-left: 50%;
+}
+.one-half-arrow {
+  width: 150%;
 }
 
 /* スマホサイズ用のスタイル */
