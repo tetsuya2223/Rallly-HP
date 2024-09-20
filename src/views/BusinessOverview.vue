@@ -54,7 +54,6 @@ export default {
     },
     mounted() {
         // 各サービスアイテムに対してIntersection Observerを設定
-        console.log(this.services); 
         const items = document.querySelectorAll('.services-section__item');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
