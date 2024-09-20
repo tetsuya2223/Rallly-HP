@@ -89,7 +89,7 @@
             </tbody>
         </table>
     </div>
-      <a class="ict-details-contact__link" href="/contact-us">人事労務システムICT化について相談してみる</a>
+      <router-link class="ict-details-contact__link" to="/contact-us">人事労務システムICT化について相談してみる</router-link>
     </section>
   </div>
 

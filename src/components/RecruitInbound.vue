@@ -202,6 +202,7 @@ export default {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  box-sizing: border-box; 
 }
 .recriutment-link:hover {
   opacity: 0.7;

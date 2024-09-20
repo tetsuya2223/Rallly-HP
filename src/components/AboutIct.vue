@@ -19,7 +19,7 @@
         </div>
       </div>
     </section>
-    <a class="ict-contact__link" href="/contact-us">まずはお気軽にご相談ください</a>
+    <router-link class="ict-contact__link" to="/contact-us">まずはお気軽にご相談ください</router-link>
   </div>
 </template>
 
@@ -122,6 +122,7 @@ export default {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  box-sizing: border-box; 
 }
 .ict-contact__link:hover {
   opacity: 0.7;

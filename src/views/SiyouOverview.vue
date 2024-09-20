@@ -102,6 +102,7 @@ export default {
   width: 100%;
   text-align: center;
   text-decoration: none;
+  box-sizing: border-box; 
 }
 .requirements-content--link:hover {
   opacity: 0.7;

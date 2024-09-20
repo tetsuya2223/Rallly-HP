@@ -116,7 +116,7 @@
           </tbody>
         </table>
     </div>
-      <a class="ict-details-contact__link" href="/contact-us">会計管理システムICT化について相談してみる</a>
+      <router-link class="ict-details-contact__link" to="/contact-us">会計管理システムICT化について相談してみる</router-link>
     </section>
   </div>
 
@@ -214,6 +214,7 @@
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  box-sizing: border-box; 
 }
 .ict-details-contact__link:hover {
   opacity: 0.7;

@@ -13,6 +13,7 @@
           class="contact-form__input"
           placeholder="例：山田 太郎"
           required
+          autocomplete="name"
         />
       </div>
 
@@ -25,6 +26,7 @@
           class="contact-form__input"
           placeholder="例：example@example.com"
           required
+          autocomplete="email"
         />
       </div>
 

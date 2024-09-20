@@ -8,13 +8,13 @@
         v-for="(news, index) in newsItems"
         :key="index"
       >
-        <a :href="news.link" class="news-card__link">
+        <router-link :to="news.link" class="news-card__link">
           <img class="news-card__image" :src="news.image" :alt="news.title">
           <p class="news-card__date">{{ formatDate(news.date) }}</p> 
           <div class="news-card__content">
             <h3 class="news-card__title">{{ news.title }}</h3>
           </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </section>
