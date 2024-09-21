@@ -116,6 +116,7 @@ export default {
 .services-section__title {
   font-weight: bold;
   font-size: 1.6rem;
+  margin-top: 0;
 }
 
 .services-section__detail {
@@ -141,6 +142,7 @@ export default {
   text-align: center;
   margin-top: 20px;
   text-decoration: none;
+  box-sizing: border-box; /* パディングを幅に含める */
 }
 
 .service-section--link:hover {
@@ -172,6 +174,7 @@ export default {
   .services-section__item {
     flex-direction: column; /* スマホサイズでは縦並び */
     margin-top: 20px; /* アイテム間の余白を狭く */
+    text-align: center;
   }
   .services-section__content,
   .services-section__image {
@@ -206,6 +209,9 @@ export default {
   .service-section--link {
     font-size: 1rem; /* リンクのフォントサイズを小さく */
     padding: 10px; /* リンクの内側の余白を調整 */
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
   }
 }
 

@@ -18,7 +18,7 @@
           <p class="inbound-service__content--description">
             外国人旅行者を新規で獲得したい国内の飲食店を対象に、マーケティングから、人材育成、人材リソースの提供までをトータルサポートしております。
           </p>
-          <a class="inbound-service__content--link" href="/contact-us">サービスを問い合わせる</a>
+          <router-link  class="inbound-service__content--link" to="/contact-us">サービスを問い合わせる</router-link>
         </div>
       </div>
       <div class="inbound-service__item">
@@ -27,7 +27,7 @@
           <p class="inbound-service__content--description">
             日本への旅行者を対象に、海外経験を持つ日本人コンシェルジュが、旅程表の作成から各種手配、緊急時のサポートまでを行なっております。
           </p>
-          <router-link class="inbound-service__content--link" href="/contact-us">サービスを問い合わせる</router-link>
+          <router-link class="inbound-service__content--link" to="/contact-us">サービスを問い合わせる</router-link>
         </div>
         <div class="inbound-service__image">
           <img src="../images/inbound-service-2.jpg" alt="インバウンド事業の写真2" class="inbound-service__image--image">
@@ -42,7 +42,7 @@
           <p class="inbound-service__content--description">
             海外向けに情報発信したい企業に対し、弊社の外国人SEスタッフが、企業サイト、LP、SNS等のリブランディングを行います。
           </p>
-          <router-link class="inbound-service__content--link" href="/contact-us">サービスを問い合わせる</router-link>
+          <router-link class="inbound-service__content--link" to="/contact-us">サービスを問い合わせる</router-link>
         </div>
       </div>
     </div>
@@ -121,6 +121,7 @@ export default {
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s;
+  box-sizing: border-box;
 }
 .inbound-service__content--link:hover {
   opacity: 0.7;
