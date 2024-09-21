@@ -9,11 +9,7 @@
         </div>
         <div class="company-info__item">
           <span class="company-info__item--label">住所</span>
-          <span class="company-info__item--value">〒604-8074<br>京都府京都市中京区富小路通三条下る朝倉町<br>５３４番地バウハウス富小路三条４０１号室</span>
-        </div>
-        <div class="company-info__item">
-          <span class="company-info__item--label">主たる事業所</span>
-          <span class="company-info__item--value">〒231-0033<br>横浜市中区長者町3丁目8-13TK関内プラザ304A</span>
+          <span class="company-info__item--value">〒231-0033<br>神奈川県横浜市中区長者町3-8-13<br>TK関内プラザ304A</span>
         </div>
         <div class="company-info__item">
           <span class="company-info__item--label">代表取締役</span>
